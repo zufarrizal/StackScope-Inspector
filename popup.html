@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StackScope Inspector</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <p class="eyebrow">StackScope Inspector</p>
+        <h1>Website Stack Detector</h1>
+        <p class="subtitle">Frontend, framework, CMS, server, dan indikasi backend dalam satu panel.</p>
+      </section>
+
+      <section class="site-card">
+        <p class="label">Tab aktif</p>
+        <h2 id="site-title">Memuat...</h2>
+        <p id="site-url" class="muted">Menunggu hasil analisis</p>
+      </section>
+
+      <section id="summary" class="summary-grid"></section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h3>Detected Stack</h3>
+          <button id="refresh" type="button">Refresh</button>
+        </div>
+        <div id="results" class="results"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h3>Catatan</h3>
+        </div>
+        <p class="note">
+          Frontend biasanya dapat dideteksi cukup akurat. Backend dan bahasa server sering hanya berupa indikasi,
+          terutama jika website memakai CDN, reverse proxy, atau menyembunyikan header.
+        </p>
+      </section>
+    </main>
+
+    <template id="category-template">
+      <section class="category">
+        <h4></h4>
+        <div class="chips"></div>
+      </section>
+    </template>
+
+    <template id="chip-template">
+      <article class="chip">
+        <div class="chip-head">
+          <strong></strong>
+          <span class="score"></span>
+        </div>
+        <p class="chip-type"></p>
+        <p class="chip-evidence"></p>
+      </article>
+    </template>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

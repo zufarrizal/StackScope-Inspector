@@ -1,0 +1,194 @@
+:root {
+  color-scheme: light;
+  --bg: #f3efe7;
+  --panel: rgba(255, 252, 247, 0.94);
+  --line: rgba(59, 43, 29, 0.14);
+  --text: #2e2218;
+  --muted: #756657;
+  --accent: #0e7c66;
+  --accent-soft: rgba(14, 124, 102, 0.12);
+  --warning: #9b4d14;
+  --shadow: 0 18px 50px rgba(64, 45, 23, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 420px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 35%),
+    linear-gradient(145deg, #efe6d7, #f8f5ef 55%, #ebe1cf);
+  color: var(--text);
+  font: 14px/1.45 "Segoe UI", "Trebuchet MS", sans-serif;
+}
+
+.app {
+  padding: 18px;
+}
+
+.hero,
+.site-card,
+.panel,
+.summary-pill {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.eyebrow,
+.label {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero h1,
+.site-card h2,
+.panel h3,
+.category h4 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.subtitle,
+.muted,
+.note,
+.chip-type,
+.chip-evidence {
+  color: var(--muted);
+}
+
+.site-card {
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.site-card h2 {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.summary-pill {
+  padding: 12px 14px;
+}
+
+.summary-pill strong {
+  display: block;
+  margin-top: 2px;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.panel {
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+button {
+  border: 1px solid rgba(14, 124, 102, 0.24);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 8px 12px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(14, 124, 102, 0.18);
+}
+
+.results {
+  display: grid;
+  gap: 12px;
+}
+
+.category {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.category:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.category h4 {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.chips {
+  display: grid;
+  gap: 10px;
+}
+
+.chip {
+  padding: 12px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(248, 244, 236, 0.9));
+  border: 1px solid rgba(59, 43, 29, 0.1);
+}
+
+.chip-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.chip-head strong {
+  font-size: 15px;
+}
+
+.score {
+  color: var(--warning);
+  font-weight: 700;
+}
+
+.chip-type,
+.chip-evidence {
+  margin: 0;
+  font-size: 12px;
+}
+
+.chip-evidence {
+  margin-top: 5px;
+}
+
+.empty {
+  margin: 0;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px dashed var(--line);
+}
