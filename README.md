@@ -16,15 +16,17 @@ Chrome Extension Manifest V3 untuk mendeteksi:
 
 ## Cara pakai
 
-1. Buka `chrome://extensions`
-2. Aktifkan `Developer mode`
-3. Klik `Load unpacked`
-4. Pilih folder ini: `c:\Users\Admin\Documents\GitHub\CWEB`
+1. Clone/download repo ini ke komputer.
+2. Buka Chrome lalu akses `chrome://extensions`.
+3. Aktifkan `Developer mode` (pojok kanan atas).
+4. Klik `Load unpacked`.
+5. Pilih folder project ini: `c:\Users\Admin\Documents\GitHub\StackScope-Inspector`.
+6. Buka website yang ingin dicek, lalu klik icon extension `StackScope Inspector`.
+7. Lihat hasil deteksi frontend/backend beserta confidence score dan evidence.
 
 ## Icon
 
 - File icon extension ada di folder `icons/`
-- Untuk generate ulang icon PNG, jalankan: `python scripts/generate_icons.py`
 
 ## Catatan
 
